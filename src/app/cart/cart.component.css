@@ -1,0 +1,181 @@
+.cont{
+  background-image: url('../../assets/productbg.jpeg');
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  gap: 30px;
+  max-height: 50rem;
+  overflow-y: auto;
+  width: 100%;
+  background: rgba(15, 15, 15, .8);
+  padding: 50px 35px;
+
+}
+
+.card {
+  width: calc(33.33% - 20px);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  background: rgba(15, 15, 15, .8);
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.content {
+  padding: 1.5em;
+  color: white;
+  background: #353535;
+  /* padding: 0; */
+  padding-bottom: 30px;
+  height: 100%;
+}
+
+.all {
+  width: 74rem;
+  margin: auto;
+}
+
+.lst {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.img {
+  padding: 3em;
+}
+
+.key {
+  margin: 0;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 30px;
+  margin-bottom: 5px;
+}
+.ullst{
+  /* content: ""; */
+  /* background-position: center center; */
+  /* background-size: contain; */
+  background-repeat: no-repeat;
+  left: 0;
+  top: 0;
+  /* gap: 10px ; */
+  justify-content: space-between;
+  font-size: 14px;
+  line-height: 19px;
+  margin-bottom: 3px;
+  overflow: hidden;
+}
+
+.vw{
+  margin-top: 30px;
+  gap: 10px;
+  justify-content: center;
+}
+.pvw{
+  background: linear-gradient(270deg, #B40000 0%, #FF3333 89.92%);
+  border-radius: 5px;
+  color: #fff !important;
+  /* font-size: 16px; */
+  /* line-height: 22px; */
+  padding: 10px 20px;
+  display: inline-flex;
+  transition: all .3s;
+  text-decoration: none !important;
+  border: 0;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  outline: none !important;
+  cursor: pointer;
+}
+
+.whiIcon{
+  background: linear-gradient(270deg, #B40000 0%, #FF3333 89.92%);
+  border-radius: 5px;
+  color: #fff !important;
+  /* font-size: 16px;
+  line-height: 22px; */
+  padding: 10px 20px;
+  display: inline-flex;
+  transition: all .3s;
+  text-decoration: none !important;
+  border: 0;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  outline: none !important;
+  max-height: 44px;
+}
+.whis{
+  border-color: #fff;
+  width: 1.5rem;
+}
+.chk{
+  width: 1rem;
+}
+.rp{
+  margin: 0;
+  text-align: center;
+  font-size: 16px;
+  line-height: 22px;
+  margin-top: 12px;
+  color: #FF3333;
+}
+
+.card-container::-webkit-scrollbar {
+  width: 8px; /* Set width as needed */
+}
+
+.card-container::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.card-container::-webkit-scrollbar-thumb {
+  background-color: #555454;
+  border-radius: 4px;
+}
+
+.card-container::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.scrollbar-curve {
+  position: absolute;
+  top: 0;
+  right: -4px;
+  width: 8px; /* Set width to match scrollbar width */
+  height: 100%;
+  background-color: #fff; /* Set background color as needed */
+  border-radius: 4px; /* Adjust border radius to create the curve */
+  pointer-events: none; /* Ensure this element doesn't intercept mouse events */
+}
+h1{
+  font-weight: 700;
+    font-size: 50px;
+    line-height: 68px;
+    margin-bottom: 30px;
+}
+.gaming-image{
+  position: relative;
+}
+.text-img{
+  position: absolute;
+  bottom: 15%;
+  left: 10%;
+}
+.back-btn{
+  position: absolute;
+  top: 25%;
+  left: 10%;
+}

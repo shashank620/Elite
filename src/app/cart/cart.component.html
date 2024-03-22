@@ -1,0 +1,63 @@
+<div class="gaming-image">
+  <div class="text-white">
+    <img src="../../assets/background.jpeg" alt="">
+    <div class="back-btn">
+      <div class="back-arrow d-flex">
+        <div class="mr-3" (click)="goBack()">
+          <svg style="font-size: 2.5em; cursor: pointer;" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+            class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z" />
+          </svg>
+        </div>
+        <p class="mr-2 mt-2" (click)="goBack()">Home</p>
+        <div class="mr-3 mt-2" >
+          <svg style="cursor: pointer;" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+          fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+          <path
+            d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+          </svg>
+        </div>
+        <a class="mt-2" (click)="goBack()" style="color: #ff3434;cursor: pointer;" href="">Cart</a>
+      </div>
+    </div>
+    <div class="text-img">
+      <h1>Build Best Gaming PC Online</h1>
+      <p>PC gaming is a passion and now getting a right PC for your individual needs is crucial.</p>
+      <p>Here at Volted PC, we do that for you and all you need to do is choose a Pre-Configured according to your
+        requirement and we will get it delivered straight to your room which is ready for gaming out of the box.</p>
+      <p>Made out of perfection, also check out our:</p>
+    </div>
+  </div>
+</div>
+<div class="cont">
+  <div class="all">
+    <div class="card-container">
+      <div class="card" *ngFor="let card of cards">
+        <img class="img" [src]="card.imageUrl" alt="Card Image">
+        <div class="content w-100">
+          <p style="font-size: 18px; font-weight: 700; line-height: 30px; margin: 0; text-align: center;">{{
+            card.content }}</p>
+          <p class="mb-4 rp">{{card.starting}} {{card.prize}}</p>
+          <div>
+            <p class="key">{{card.key}}</p>
+          </div>
+          <ul class="lst">
+            <li class="ullst" *ngFor="let item of card.list"><img class="chk mr-2"
+                src="../../assets/green-checkmark-line-icon.png" alt="">{{ item }}</li>
+          </ul>
+          <div class="d-flex vw mb-3">
+            <div>
+              <p (click)="addToCart(card)" class="pvw"><img class="whis" src="../../assets/icons8-laptop-50.png" alt="">
+                {{card.view}}</p>
+            </div>
+            <div class="whiIcon">
+              <img class="whis" src="../../assets/icons8-heart-24.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,25 @@
+.footer-column{
+  justify-content: center;
+  display: flex;
+  padding: 2em 0em;
+  flex-wrap: wrap;
+}
+.space{
+  margin: 0 4em;
+}
+.footer{
+  background: linear-gradient(180deg, #000000 0%, #2D2D2D 100%);
+  padding:  5em;
+  color: white;
+}
+h5{
+  margin: 0;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    background: linear-gradient(270deg, #B40000 0%, #FF3333 89.92%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 15px;
+}

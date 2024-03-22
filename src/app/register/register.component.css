@@ -1,0 +1,96 @@
+.bg {
+  background: linear-gradient(180deg, #000000 -4.3%, #541606 159.2%);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+p {
+  font-family: Lato;
+}
+
+#root {
+  padding: 30px;
+}
+
+.register-form {
+  background: linear-gradient(180deg, #000000 -4.3%, #541606 159.2%);
+  padding: 20px;
+  border: 1px solid rgb(26 26 26 / 35%);
+  border-radius: 10px;
+  width: 35%;
+  margin: auto;
+
+}
+
+.card {
+  margin: auto;
+  border-radius: 3%;
+  background: linear-gradient(180deg, rgb(29 28 28 / 10%) 0%, rgb(0 0 0 / 65%) 146.07%);
+
+}
+
+.fill {
+  background: #1d1c1c !important;
+  box-shadow: none !important;
+}
+
+.invalid-feedback {
+  color: black;
+}
+
+.head {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #ff3434;
+  font-weight: 500;
+  margin: auto;
+  text-align: center;
+}
+
+.btn {
+  background: linear-gradient(270deg, #B40000 0%, #FF3333 89.92%);
+  border-radius: 5px;
+  color: #fff !important;
+  font-size: 16px;
+  line-height: 22px;
+  padding: 10px 20px;
+  display: inline-flex;
+  transition: all .3s;
+  text-decoration: none !important;
+  border: 0;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  outline: none !important;
+}
+
+.inp {
+  background: #1d1c1c !important;
+  border-radius: 4px;
+  height: 40px;
+  border: 0;
+  box-shadow: none !important;
+  color: white;
+}
+
+.lett{
+  color: #767676;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: .03em;
+    width: 100%;
+
+}
+.inva{
+  font-size: 14px;
+    font-weight: 300 !important;
+    margin-top: 5px;
+    display: block;
+    color:#ff3434;
+}
+
+.content-btn{
+  background-color: black;
+  color: gray;
+  border: none;
+}

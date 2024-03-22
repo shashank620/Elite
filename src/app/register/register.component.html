@@ -1,0 +1,99 @@
+<div class="bg">
+  <div class="mb-4">
+    <h4 class="account_title register-account-title head"> Already have an account - <a><button (click)="routeChange()"
+          class="content-btn">Sign In</button></a></h4>
+  </div>
+  <div class="register-form">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <div class="mb-4 text-white">
+          <h5>Sign Up</h5>
+        </div>
+        <label class="lett">First Name</label>
+        <input type="text" class="fill" aria-required="true" aria-invalid="true" formControlName="fullname"
+          class="form-control inp" [ngClass]="{ 'is-invalid': submitted && f['fullname'].errors }" />
+        @if (submitted && f['fullname'].errors) {
+        <div class="invalid-feedback">
+          @if (f['fullname'].errors['required']) {
+          <div class="inva">The "First Name" field is required</div>
+          }
+        </div>
+        }
+      </div>
+
+      <div class="form-group">
+        <label class="lett">Last Name</label>
+        <input type="text" formControlName="last" class="form-control inp"
+          [ngClass]="{ 'is-invalid': submitted && f['last'].errors }" />
+        @if (submitted && f['last'].errors) {
+        <div class="invalid-feedback">
+          @if (f['last'].errors['required']) {
+          <div class="inva">The "Last Name" field is required</div>
+          }
+        </div>
+        }
+      </div>
+
+      <div class="form-group">
+        <label class="lett">Phone Number</label>
+        <input type="number" formControlName="phone"   maxLength="10" class="form-control inp"
+          [ngClass]="{ 'is-invalid': submitted && f['phone'].errors }" />
+        @if (submitted && f['phone'].errors) {
+        <div class="invalid-feedback">
+          @if (f['phone'].errors['required']) {
+          <div class="inva">Phone Number is required</div>
+          }
+        </div>
+        }
+      </div>
+
+      <div class="form-group">
+        <label class="lett">Email</label>
+        <input type="text" formControlName="email" class="form-control inp"
+          [ngClass]="{ 'is-invalid': submitted && f['email'].errors }" />
+        @if (submitted && f['email'].errors) {
+        <div class="invalid-feedback">
+          @if (f['email'].errors['required']) {
+          <div class="inva">Email is required</div>
+          } @if (f['email'].errors['email']) {
+          <div class="inva">Email is invalid</div>
+          }
+        </div>
+        }
+      </div>
+
+      <div class="form-group">
+        <label class="lett">Password</label>
+        <input type="password" formControlName="password" class="form-control inp"
+          [ngClass]="{ 'is-invalid': submitted && f['password'].errors }" />
+        @if (submitted && f['password'].errors) {
+        <div class="invalid-feedback">
+          @if (f['password'].errors['required']) {
+          <div class="inva">Password is required</div>
+          } @if (f['password'].errors['minlength']) {
+          <div class="inva">Password must be at least 6 characters</div>
+          }
+        </div>
+        }
+      </div>
+
+      <div class="form-group">
+        <label class="lett">Confirm Password</label>
+        <input type="password" formControlName="confirmPassword" class="form-control inp"
+          [ngClass]="{ 'is-invalid': submitted && f['confirmPassword'].errors }" />
+        @if (submitted && f['confirmPassword'].errors) {
+        <div class="invalid-feedback">
+          @if (f['confirmPassword'].errors['required']) {
+          <div class="inva">Confirm Password is required</div>
+          } @if (f['confirmPassword'].errors['matching']) {
+          <div class="inva">Confirm Password does not match</div>
+          }
+        </div>
+        }
+      </div>
+      <div class="form-group">
+        <input type="submit" class="btn" [style]="{ width: '100%' }" />
+      </div>
+    </form>
+  </div>
+</div>

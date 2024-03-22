@@ -1,0 +1,60 @@
+.container-content {
+  background: linear-gradient(180deg, #000000 -4.3%, #541606 159.2%);
+  position: relative;
+  z-index: 1;
+}
+.pc-img .img{
+  align-items: center;
+    background: rgba(29, 28, 28, .8);
+    padding: 40px;
+}
+
+.container-fulid{
+  overflow-x: hidden;
+}
+.back-color{
+  align-items: center;
+  background: rgba(29, 28, 28, .8);
+  padding: 40px;
+}
+p span{
+  color: red;
+  font-weight: 900;
+    font-size: 16px;
+}
+
+button {
+  color: white;
+  background: linear-gradient(270deg, #B40000 0%, #FF3333 89.92%);
+  padding: 1rem;
+}
+.head-column{
+  font-weight: 900;
+  font-size: 20px;
+}
+.summary{
+  border: 1px solid green;
+  background-color: black;
+  padding: 10px 6px;
+}
+.addOns{
+  border: 1px solid gray;
+    background-color: black;
+  padding: 10px 6px;
+}
+.expert-call{
+  font-weight: 700;
+    font-size: 36px;
+    line-height: 49px;
+    margin-bottom: 20px;
+}
+.help-in{
+  background-image: url(https://voltedpc.in/assets/images/talk-to-us.webp);
+}
+.help-in a{
+  background-color: #B40000;
+  color: white;
+  padding: 10px 2em;
+  text-decoration: none;
+  border-radius: 5px;
+}

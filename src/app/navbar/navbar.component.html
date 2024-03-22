@@ -1,0 +1,80 @@
+<nav class="navbar navbar-expand-lg navbar-light p-0">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+    aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="navbar collapse navbar-collapse" id="navbarTogglerDemo01">
+    <div class="logo mr-5">
+      <img src="../../assets/elite.jpeg" width="60px" alt="" />
+    </div>
+    <div class="voltedPC mr-5">
+      <div class="dropdown">
+        <a class="dropdown-toggle nav-text" href="#" id="dropdownMenuLink" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          Volted PC
+        </a>
+        <ul class="dropdown-menu uli" aria-labelledby="dropdownMenuLink">
+          <li><a class="dropdown-item dropbuildc" routerLink="/build_pc">Build Your PC</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="valtedMode mr-5">
+      <div class="dropdown">
+        <a class="dropdown-toggle nav-text" href="#" id="dropdownMenuLink" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          Volted Mode
+        </a>
+        <ul class="dropdown-menu uli" aria-labelledby="dropdownMenuLink">
+          <li><a class="dropdown-item dropbuildc" href="#">Custome Sleeved Cable</a></li>
+          <li><a class="dropdown-item dropbuildc" href="#">Custom Fans</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="services mr-5 nav-text">
+      <a href="#" class="nav-text" id="dropdownMenuLink"> Services </a>
+    </div>
+    <div class="moreAboutUs mr-5">
+      <div class="dropdown">
+        <a class="dropdown-toggle nav-text" href="#" id="dropdownMenuLink" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          More about us
+        </a>
+        <ul class="dropdown-menu uli" aria-labelledby="dropdownMenuLink">
+          <li><a class="dropdown-item dropbuildc" href="#">Our Company</a></li>
+          <li><a class="dropdown-item dropbuildc" href="#">Our portfolio</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="buildPC mr-5">
+      <button (click)="handleBuild()" class="btn" type="button">Build your PC</button>
+    </div>
+    <div class="profile mr-5 ">
+      <div class="dropdown">
+        <a class="dropdown-toggle  account" href="#" id="dropdownMenuLink" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle mr-2" viewBox="0 0 16 16">
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+          </svg>
+          
+          <span class="mr-2">Account</span>
+        </a>
+        <ul class="dropdown-menu uli" aria-labelledby="navbarDropdownMenuLink">
+          <li *ngIf="!isNavbarUpdated?.val"><a class="dropdown-item dropbuildc" (click)="signIn()">Sign In</a></li>
+          <li *ngIf="!isNavbarUpdated?.val"><a class="dropdown-item dropbuildc" (click)="signUp()">Sign Up</a></li>
+          <li *ngIf="isNavbarUpdated?.val"><a class="dropdown-item dropbuildc">{{isNavbarUpdated.name}}</a></li>
+          <li *ngIf="isNavbarUpdated?.val"><a class="dropdown-item dropbuildc">{{isNavbarUpdated.lName}}</a></li>
+          <li *ngIf="isNavbarUpdated?.val"><a class="dropdown-item dropbuildc" (click)="logout()">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="add-cart mr-5" (click)="handleCard()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-cart"
+        viewBox="0 0 16 16">
+        <path
+          d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+      </svg>
+      <p class="length">{{cartLength}}</p>
+    </div>
+  </div>
+</nav>

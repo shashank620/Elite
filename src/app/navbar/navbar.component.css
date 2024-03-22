@@ -1,0 +1,81 @@
+.nav-text {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+.account {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+.nav-text:hover {
+  color: #df0f0f;
+  font-weight: 700;
+}
+
+#navbarTogglerDemo01 {
+  padding: 2em 5em;
+  background-color: #000;
+  justify-content: center;
+}
+
+.btn {
+  color: white;
+  background: linear-gradient(270deg, #B40000 0%, #FF3333 89.92%);
+}
+
+.add-cart svg {
+  font-size: 26px;
+  color: white;
+}
+
+.profile {
+  font-size: 16px;
+}
+
+.dropdown-item {
+  cursor: pointer;
+}
+
+.add-cart {
+  position: relative;
+  cursor: pointer;
+}
+
+.add-cart p {
+  position: absolute;
+  bottom: 5px;
+  left: 17px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  /* color: #B40000; */
+  background-color: #B40000;
+  color: #fff;
+  padding: 7px;
+  border-radius: 50%;
+}
+
+
+.uli {
+  background-color: #212529;
+  margin: 0;
+  padding: 5px;
+  border: 0;
+}
+
+.dropbuildc {
+  color: #fff;
+}
+
+.dropbuildc:hover {
+  color: #df0f0f;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  min-width: max-content;
+  background-color: #212529;
+}
+
