@@ -36,8 +36,8 @@
 
       <div class="form-group">
         <label class="lett">Phone Number</label>
-        <input type="number" formControlName="phone"   maxLength="10" class="form-control inp"
-          [ngClass]="{ 'is-invalid': submitted && f['phone'].errors }" />
+        <input type="number" formControlName="phone"  maxLength="10" class="form-control inp"
+          [ngClass]="{ 'is-invalid': submitted && f['phone'].errors}" />
         @if (submitted && f['phone'].errors) {
         <div class="invalid-feedback">
           @if (f['phone'].errors['required']) {

@@ -1,5 +1,5 @@
 import { Component, Output } from '@angular/core';
-import { FormControl, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, isFormControl, ReactiveFormsModule } from '@angular/forms';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import Validation from '../utils/validation';
 import { CommonModule } from '@angular/common';
@@ -22,9 +22,9 @@ export class LoginComponent {
     confirmPassword: new FormControl(''),
   });
   submitted = false;
-  userLogin: boolean= false;
+  userLogin: boolean = false;
 
-  constructor(private formBuilder: FormBuilder, private route: Router,private serviceAuth:AuthService) { }
+  constructor(private formBuilder: FormBuilder, private route: Router, private serviceAuth: AuthService) { }
 
   signUp() {
     this.route.navigate(['./signUp'])
@@ -68,15 +68,20 @@ export class LoginComponent {
       try {
         const parsedValue = JSON.parse(getValueLocal);
         console.log("::: pass value", parsedValue);
+
         if (parsedValue.length >= 1) {
           parsedValue.map((val: any) => {
 
             if (val.email === this.form.value.email && val.password === this.form.value.password) {
-              this.serviceAuth.updateNavbar({val:true,name:val.fullname,lName:val.last})
+              this.serviceAuth.updateNavbar({ val: true, name: val.fullname, lName: val.last })
               this.serviceAuth.setValues(true);
               this.route.navigate(['./home']);
-            } else {
-              alert('Please verify your Emails or password')
+
+            } else if (val.email === this.form.value.email && val.password !== this.form.value.password) {
+              alert("Verify your Password !")
+            }
+            else{
+              alert("User Not Found !")
             }
           })
         } else {

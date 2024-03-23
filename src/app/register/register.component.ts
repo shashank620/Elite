@@ -38,7 +38,7 @@ export class RegisterComponent {
             Validators.required,
           ],
         ],
-        phone: ['', [Validators.required]],
+        phone: ['', [Validators.required, Validators.maxLength(10)]],
         email: ['', [Validators.required, Validators.email]],
         password: [
           '',
